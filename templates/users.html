@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block content %}
+  <h1>Registered Users...</h1>
+  {% if entries %}
+  <table class="table table-bordered">
+    <tr>
+      <td><b>Email</b></td>
+      <td><b>Name</b></td>
+      <td><b>Theme</b></td>
+      <td><b>PreviewAccess</b></td>
+    </tr>
+  {% for row in entries %}
+    <tr>
+        <td>{{ row.email }}</td>
+        <td>{{ row.name }}</td>
+        <td>{{ row.theme }}</td>
+        <td>{{ row.previewAccess }}</td>
+     </tr>
+  {% endfor %}
+  </table>
+  {% else %}
+  <p>Fail! Did you add any Users to the database?</p>
+  {% endif %}
+{% endblock %}
