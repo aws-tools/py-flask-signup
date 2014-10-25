@@ -1,0 +1,11 @@
+# Available configuration values. Needs to be passed 
+# as environment variables to application. Either via 
+# web server as OS environment variables, as environment 
+# settings in AWS Elastic Beanstalk or provided directly 
+# in the application.py code.
+AWS_REGION="aws_region"
+STARTUP_SIGNUP_TABLE="your_ddb_table_name"
+STARTUP_SIGNUP_RDBMS="your_rds_rdbms_endpoint"
+NEW_SIGNUP_TOPIC="your_sns_topic_name"
+THEME="default"
+FLASK_DEBUG="true"

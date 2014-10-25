@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    {% if title %}
+    <title>{{ title }}</title>
+    {% else %}
+    <title>A New Startup: Sign Up Today!</title>
+    {% endif %}
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{ url_for('static', filename="bootstrap/css/theme/" + theme + "/bootstrap.css") }}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{ url_for('static', filename="bootstrap/css/jumbotron-narrow.css") }}" rel="stylesheet">
+
+  </head>
+
+  <body>    
+    <div class="container">
+      <div class="header">
+        <ul class="nav nav-pills pull-right">
+          <li class="active"><a href="/">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Press</a></li>
+        </ul>
+        <h3 class="text-muted">A New Startup</h3>
+      </div>
+    </div>
+    {% block content %}{% endblock %}
+  </body>
+</html>
