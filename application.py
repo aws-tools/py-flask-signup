@@ -63,6 +63,7 @@ class User(db.Model):
     name = db.Column(db.String(255))
     theme = db.Column(db.String(30))
     previewAccess = db.Column(db.String(10))
+    age = db.Column(db.Integer)
 
 # Connect to DynamoDB and get ref to Table
 #ddb_conn = dynamodb2.connect_to_region(application.config['AWS_REGION'])
