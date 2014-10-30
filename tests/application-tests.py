@@ -16,39 +16,41 @@
 import application
 import unittest
 
-import flask
-from flask import current_app, request, Response
+from application import application
+from flask import Flask, current_app, request, Response
 
-
+""" Main test cases for our application """
 class AppTestCase(unittest.TestCase):
-    """ Main test cases for our application """
+
+    #application = Flask(__name__)
 
     def setUp(self):
-        app.testing = True
+        application.testing = True
 
-        with app.app_context():
-            self.app=app.test_client()
+        with application.app_context():
+            self.client = current_app.test_client()
 
     def test_load_config(self):
         """ Test that we can load our config properly """
-        assertTrue(1)
+        self.assertTrue(1)
 
     def test_get_test(self):
         """ Test hitting /test and that we get a correct HTTP response """
-        assertTrue(1)
+        self.assertTrue(1)
 
     def test_get_form(self):
         """ Test that we can get a signup form """
-        assertTrue(1)
+        self.assertTrue(1)
 
     def test_get_user(self):
         """ Test that we can get a user context """
-        assertTrue(1)
+        self.assertTrue(1)
 
     def test_login(self):
         """ Test that we can authenticate as a user """
-        assertTrue(1)
+        self.assertTrue(1)
 
 
 if __name__ == '__main__':
     unittest.main()
+
