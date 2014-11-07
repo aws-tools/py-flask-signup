@@ -35,7 +35,7 @@ FLASK_DEBUG = 'false' if os.environ.get('FLASK_DEBUG') is None else os.environ.g
 AWS_REGION = 'us-east-1' if os.environ.get('AWS_REGION') is None else os.environ.get('AWS_REGION')
 #STARTUP_SIGNUP_TABLE = '' if os.environ.get('STARTUP_SIGNUP_TABLE') is None else os.environ.get('STARTUP_SIGNUP_TABLE')
 STARTUP_SIGNUP_RDBMS = '' if os.environ.get('STARTUP_SIGNUP_RDBMS') is None else os.environ.get('STARTUP_SIGNUP_RDBMS')
-NEW_SIGNUP_TOPIC = '' if os.environ.get('NEW_SIGNUP_TOPIC') is None else os.environ.get('STARTUP_SIGNUP_RDBMS')
+NEW_SIGNUP_TOPIC = '' if os.environ.get('NEW_SIGNUP_TOPIC') is None else os.environ.get('NEW_SIGNUP_TOPIC')
 
 # Create the Flask app
 application = flask.Flask(__name__)
